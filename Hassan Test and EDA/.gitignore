@@ -5,3 +5,5 @@ archive.zip
 EDA Summary.xlsx
 Important Notes.docx
 clean_df.csv
+clean_df.parq
+PredictionDifferences.parq
