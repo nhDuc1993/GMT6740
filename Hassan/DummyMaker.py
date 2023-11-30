@@ -3,6 +3,7 @@
 #
 import sklearn
 import pandas as pd
+import numpy as np
 
 class GetDummies(sklearn.base.TransformerMixin):
     """Fast one-hot-encoder that makes use of pandas.get_dummies() safely
@@ -28,7 +29,7 @@ class GetDummies(sklearn.base.TransformerMixin):
         # fit add them and set to 0
         missing = set(self.final_columns) - set(X_columns)
         for c in missing:
-            X[c] = 0
+            X[c] = pd.arrays.SparseArray(np.full(len(X),False))
         # remove any new columns that may have resulted from values in
         # X that were not in the data set when fit
         return X[self.final_columns]
