@@ -12,3 +12,5 @@ scr/clean_df.csv
 /Hassan/__pycache__
 
 *.csv
+*.txt
+*.npz
