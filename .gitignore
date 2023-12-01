@@ -10,3 +10,5 @@ scr/clean_df.csv
 scr/clean_df.csv
 
 /Hassan/__pycache__
+
+*.csv
