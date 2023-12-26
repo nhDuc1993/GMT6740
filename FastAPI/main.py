@@ -37,9 +37,8 @@ async def read_submission(data: dict):
 
     X_trans = preprocessing.transform(arr)
     y_pred = linear_regression.predict(X_trans)
-    print(y_pred[0])
 
-    return y_pred[0]
+    return round(y_pred[0],2)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)

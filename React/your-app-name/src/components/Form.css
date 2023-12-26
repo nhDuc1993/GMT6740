@@ -1,0 +1,17 @@
+.custom-padding {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+/* custom-styles.css */
+.custom-container {
+    margin: 30px; /* Your custom margin value */
+  }
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #eefe86;
+    outline: 1;
+    box-shadow: 0 0 0 0.25rem rgba(253, 245, 13, 0.25);
+  }

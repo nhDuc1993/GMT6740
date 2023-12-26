@@ -1,6 +1,8 @@
 import { stringify } from "querystring";
 import React, { Children, useState } from "react";
 import api from "../api";
+import "bootstrap/dist/css/bootstrap.css";
+import "./Form.css";
 
 interface props {
   handleFormSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
@@ -27,9 +29,9 @@ const Form = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container custom-container ">
       <form onSubmit={handleFormSubmit}>
-        <div className="mb-3 mt-3">
+        <div className="custom-padding mb-3 mt-3">
           <label htmlFor="maker" className="form-label">
             Maker
           </label>
@@ -43,7 +45,8 @@ const Form = () => {
             value={formData.maker}
           ></input>
         </div>
-        <div className="mt-3">
+
+        <div className="custom-padding mb-3 mt-3">
           <label htmlFor="model" className="form-label">
             Model
           </label>
@@ -58,7 +61,7 @@ const Form = () => {
           ></input>
         </div>
 
-        <div className="mt-3">
+        <div className="custom-padding mb-3 mt-3">
           <label htmlFor="mileage" className="form-label">
             Mileage
           </label>
@@ -73,12 +76,16 @@ const Form = () => {
           ></input>
         </div>
 
-        <button type="submit" className="btn btn-primary">
-          {" "}
-          Submit
-        </button>
+        <div className="custom-padding mb-3 mt-3">
+          <button type="submit" className="btn btn-primary">
+            {" "}
+            Submit
+          </button>
+        </div>
       </form>
-      <p>The estimate price of this car is € {res.data}</p>
+      <div className="custom-padding mb-3 mt-3">
+        <p>The estimate price of this car is €{res.data}</p>
+      </div>
     </div>
   );
 };
