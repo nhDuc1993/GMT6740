@@ -1,8 +1,4 @@
-import React, { ReactNode } from "react";
-
-// interface props {
-//   children: ReactNode;
-// }
+import React from "react";
 
 const Banner = () => {
   return (

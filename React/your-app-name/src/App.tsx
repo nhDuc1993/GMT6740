@@ -1,12 +1,18 @@
-import React from "react";
-import Banner from "./components/Banner";
-import { Children } from "react";
+import React, { Children, useState } from "react";
+
 import "bootstrap/dist/css/bootstrap.css";
+import Banner from "./components/Banner";
+import Form from "./components/Form";
 
 function App() {
   return (
     <>
-      <Banner />{" "}
+      <div>
+        <Banner />
+      </div>
+      <div>
+        <Form />
+      </div>
     </>
   );
 }
